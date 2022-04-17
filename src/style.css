@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  margin: 0;
+  background-image: url("https://wallpaperaccess.com/full/1933087.jpg");
+}
+.header-image{
+  max-width: 200px;
+  height: 100%;
+}
+.header-container{
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(120deg, #43CBFF 10%, #9708CC 100%);
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+
+}
+.header-container > h1{
+  font-size: 42px;
+}
+.header-container > p{
+  font-size: 18px;
+}
+.quote-container{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 80vw;
+  width: 100%;
+}
+.quote-box{
+  padding: 20px 15px;
+  background: #fff;
+  border-radius: 10px;
+}
+.quote{
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+.quote-generator-button{
+  padding: 7px;
+  font-weight: bold;
+  font-size: 20px;
+  background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  animation: change-color 1.5s ease-in-out infinite;
+}
+@keyframes change-color{
+  0%{
+    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  }
+  50%{
+    background-image: linear-gradient(to right, #f7797d, #fbd786, #c6ffdd);
+  }
+  100%{
+    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  }
+}
+
+@media (max-width: 870px){
+  .header-container > p{
+    display: none;
+  }
+  .quote{
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 510px){
+  .header-container > h1{
+    font-size: 20px;
+  }
+}
