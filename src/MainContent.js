@@ -8,7 +8,7 @@ export default function MainContent(){
     function getQuote(){
       let array = QuotesData  
       let index = Math.floor(Math.random() * array.length);
-      return setQuotes(array[index].quote + ' - ' + array[index].name);
+      return setQuotes(`"${array[index].quote}"` + ' - ' + array[index].name);
     }
     return(
         <div className = "quote-container">
