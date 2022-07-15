@@ -3,7 +3,7 @@ import QuotesData from "./QuotesData"
 
 export default function MainContent(){
 
-    const [quotes, setQuotes] = React.useState('');
+    const [quotes, setQuotes] = React.useState('Hmmm.... Don\'t see a quote? Generate one now by clicking the button below!');
 
     function getQuote(){
       let array = QuotesData  
