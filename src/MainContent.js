@@ -9,20 +9,16 @@ export default function MainContent(){
 
     const [allQuotes, setAllQuotes] = useState("")
 
-    useEffect(() => {
-        fetch("https://type.fit/api/quotes")
-            .then(res => res.json())
-            .then(data => setAllQuotes(data))
-    }, [])
-
     function getRandomQuote(){
-        let array = allQuotes
-        let index = Math.floor(Math.random() * array.length)
+        fetch("https://api.quotable.io/random")
+        .then(res => res.json())
+        .then(data => setAllQuotes(data))
+        let quoteObj = allQuotes
         return setQuote(prevQuote => {
             return{
                 ...prevQuote,
-                quote: array[index].text,
-                person: array[index].author
+                quote: quoteObj.content,
+                person: quoteObj.author
             }
         })
     }
